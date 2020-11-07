@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	stages{
-		stage("Run Test"){
+		stage("Bring Grid up"){
 			steps{
 				sh "docker-compose up --no-color"
 			}
