@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Bring Grid up"){
 			steps{
-				sh "docker-compose up --no-color"
+				sh "docker-compose up"
 			}
 		}
 		stage("Bring Grid Down"){
