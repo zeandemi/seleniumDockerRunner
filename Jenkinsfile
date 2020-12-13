@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage("Scaling up"){
 			steps{
-				sh "docker-compose --scale chrome=2 firefox=2"
+				sh "docker-compose up --scale chrome=2 firefox=2"
 			}
 		}
 		stage("Run Test"){
