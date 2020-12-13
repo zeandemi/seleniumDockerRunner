@@ -16,7 +16,8 @@ services:
     environment:
       - HUB_HOST=hub
     deploy:
-        replicas:2
+      mode: replicated
+      replicas: 6
   search-module:
     image: 22piston/selenium-docker
     depends_on:
