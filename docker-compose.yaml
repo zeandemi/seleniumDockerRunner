@@ -33,7 +33,7 @@ services:
       - firefox
     environment:
       - HUB_HOST=hub
-      - BROWSER=chrome
+      - BROWSER=firefox
       - MODULE=book-flight-module.xml
     volumes:
       - ./output/book-result:/usr/share/udemy/test-output   
