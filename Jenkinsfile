@@ -8,12 +8,11 @@ pipeline{
 		}
 		stage("Start Grid"){
 			steps{
-				sh "docker-compose up -d hub chrome firefox"
+				sh "docker-compose --compatibility up -d hub chrome firefox"
 			}
 		}
 		stage("Run Test"){
 			steps{
-				sh "docker-compose scale firefox=2"
 				sh "docker-compose up search-module book-flight-module"
 			}
 		}
