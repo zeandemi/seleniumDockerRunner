@@ -11,14 +11,9 @@ pipeline{
 				sh "docker-compose up -d hub chrome firefox"
 			}
 		}
-		stage("Scaling up"){
-			steps{
-				sh "docker-compose scale firefox=2"
-			}
-		}
 		stage("Run Test"){
 			steps{
-				sh "docker-compose up search-module book-flight-module"
+				sh "docker-compose scale firefox=2 up search-module book-flight-module"
 			}
 		}
 	}
