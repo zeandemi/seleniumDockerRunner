@@ -13,7 +13,8 @@ pipeline{
 		}
 		stage("Run Test"){
 			steps{
-				sh "docker-compose scale firefox=2 up search-module book-flight-module"
+				sh "docker-compose scale firefox=2"
+				sh "docker-compose up search-module book-flight-module"
 			}
 		}
 	}
